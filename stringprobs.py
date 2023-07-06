@@ -21,3 +21,11 @@ def sentence_reversed():
         output=output+ mylist[index]+" "
         index=index-1
     print(output)
+
+def paper_doll():
+        input_string=input('Enter any String \n ')
+        output=''
+        for item in input_string:
+              for item2 in range(0,3):
+                     output=output+item
+        print(output)
