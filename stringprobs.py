@@ -11,3 +11,12 @@ def count_string_chars():
                 else :
                         mydict[item]=mydict.get(item)+1
         print(mydict)
+
+def sentence_reversed(input=''):
+    mylist=input.split()
+    index=-1
+    output=''
+    for item in mylist:
+        output=output+ mylist[index]+" "
+        index=index-1
+    print(output)
