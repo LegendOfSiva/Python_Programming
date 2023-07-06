@@ -31,4 +31,4 @@ def has33(list):
              pass
         index+=1
     if(not checker):
-        print('False, it contains 3,3 successively')
+        print("False, it doesn't contains 3,3 successively")

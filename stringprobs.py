@@ -12,8 +12,9 @@ def count_string_chars():
                         mydict[item]=mydict.get(item)+1
         print(mydict)
 
-def sentence_reversed(input=''):
-    mylist=input.split()
+def sentence_reversed():
+    sentence=input("Enter any sentence \n ")
+    mylist=sentence.split()
     index=-1
     output=''
     for item in mylist:
