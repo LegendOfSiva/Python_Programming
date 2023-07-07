@@ -15,17 +15,12 @@ def count_string_chars():
 def sentence_reversed():
     sentence=input("Enter any sentence \n ")
     mylist=sentence.split()
-    index=-1
-    output=''
-    for item in mylist:
-        output=output+ mylist[index]+" "
-        index=index-1
-    print(output)
+    output=mylist[::-1]
+    print(' '.join(output))
 
 def paper_doll():
         input_string=input('Enter any String \n ')
         output=''
         for item in input_string:
-              for item2 in range(0,3):
-                     output=output+item
+              output=output+(item*3)
         print(output)

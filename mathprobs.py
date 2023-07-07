@@ -33,7 +33,7 @@ def has33(list):
     if(not checker):
         print("False, it doesn't contains 3,3 successively")
 
-def spy_game(list):
+def spy_game_long(list):
     final_list=[]
     checker=False
     index=0
@@ -57,4 +57,14 @@ def spy_game(list):
             pass
         index+=1
     if (not checker):
+        print('This is not 007 list')
+
+def spy_game_short(list):
+    temp_list=[0,0,7,'x']
+    for num in list:
+        if num==temp_list[0]:
+            temp_list.pop(0)
+    if len(temp_list)==1:
+        print('I am James Bond 007.Friends call me Siva')
+    else:
         print('This is not 007 list')
