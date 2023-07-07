@@ -68,3 +68,11 @@ def spy_game_short(list):
         print('I am James Bond 007.Friends call me Siva')
     else:
         print('This is not 007 list')
+
+'''Write a Python function that takes a list and returns a new list with unique elements of the first list.
+
+Sample List : [1,1,1,1,2,2,3,3,3,3,4,5]
+Unique List : [1, 2, 3, 4, 5]
+'''
+def unique_list(list):
+       print([item for item in set(list)])
