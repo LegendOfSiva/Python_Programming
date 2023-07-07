@@ -1,3 +1,5 @@
+import string
+
 def string_reversal():
         input_string=input('Enter the input String \n ')
         print(input_string[::-1])  
@@ -59,8 +61,8 @@ def word_pallindrome():
 Write a Python function to check whether a string is pangram or not. (Assume the string passed in does not have any punctuation)
 '''
 
-def ispangram():
-    alphaset={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'}
+def ispangram(alphabet=string.ascii_lowercase):
+    alphaset=set(alphabet)
     sentence=input('Enter the sentence \n ')
     myset=set(sentence.replace(' ','').lower())
     if len(myset) !=26:
