@@ -28,3 +28,5 @@ Math Problems Region
 #mp.spy_game_long([1,0,2,4,0,5,7])
 #mp.spy_game_short([1,0,2,4,0,5,7])
 #mp.unique_list([1,1,1,1,2,2,3,3,3,3,4,5])
+#mp.fibonoccigenerator()
+#mp.randonnumgenerators()

@@ -1,3 +1,5 @@
+from random import shuffle
+
 def prime_checker():
     num = int(input("Enter a number: \n "))
     prime_flag = False
@@ -76,3 +78,32 @@ Unique List : [1, 2, 3, 4, 5]
 '''
 def unique_list(list):
        print([item for item in set(list)])
+
+def fibonoccigenerator():
+    '''Generator that generates the fibonocci series upto number n'''
+    number=int(input('Enter the number to generate fibonocci upto : '))
+    def fibgen():
+        a=1
+        b=1
+        for item in range(number):
+            while(a<=number):
+                yield a
+                a,b=b,a+b
+    for item in fibgen():
+        print(item)
+
+def randonnumgenerators():
+    '''Geneartor for n randon numbers in range low and high'''
+    low=int(input('Enter lower limit to generate random numbers : '))
+    high= int(input('Enter higher limit to generate random numbers : '))
+    n= int(input('Enter how many random numbers you want : '))
+    mylist=[num for num in range(low,high)]
+    shuffle(mylist)
+    def randomgen():
+        counter=0
+        for number in mylist:
+            if counter<n:
+                yield number
+                counter+=1
+    for number in randomgen():
+                print(number)
