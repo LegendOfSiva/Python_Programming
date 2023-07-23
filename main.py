@@ -13,6 +13,7 @@ String Problem Region
 #sp.upper_lower_count()
 #sp.word_pallindrome()
 #sp.ispangram()
+#sp.longestSubString()
 
 '''
 Game Problem Region

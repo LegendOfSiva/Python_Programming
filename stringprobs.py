@@ -72,3 +72,27 @@ def ispangram(alphabet=string.ascii_lowercase):
             print('Hurray, this is pangram')
         else :
              print('This is not a pangram, one or more characters might not be alphabets')
+
+'''Longest substring without repeating characters'''
+
+def longestSubString():
+        giveninput=input('Enter the string to find longest substring in it without repeated characters')
+        tempinput=giveninput
+        unique_list=[]
+        substring=''
+        for char in giveninput:
+         for char in tempinput:
+                if char not in substring:
+                 substring=substring+str(char)
+                else :
+                 unique_list.append(substring)
+                 substring=''
+                 tempinput=tempinput[1:]
+                 break
+        index=0
+        pos=0
+        for item in unique_list:
+          if len(item)>index:
+                index=len(item)
+                pos=unique_list.index(item)
+        print(unique_list[pos])
