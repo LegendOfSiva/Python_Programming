@@ -2,9 +2,9 @@ import stringprobs as sp
 import mathprobs as mp
 import games as g
 
-'''
+"""
 String Problem Region
-'''
+"""
 
 # sp.string_reversal()
 # sp.count_string_chars()
@@ -15,15 +15,15 @@ String Problem Region
 # sp.ispangram()
 # sp.longestSubString()
 
-'''
+"""
 Game Problem Region
-'''
+"""
 # g.guess_the_cup()
 # g.heads_or_tails()
 
-'''
+"""
 Math Problems Region
-'''
+"""
 # mp.prime_checker()
 # mp.has33([1,3,3,4])
 # mp.spy_game_long([1,0,2,4,0,5,7])
