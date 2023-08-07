@@ -8,7 +8,7 @@ def heads_or_tails():
     if option.lower() == list[0]:
         print(f"That's a {option} indeed , the coin falls as {list}")
     else:
-        print(f"oops you lost the toss , the coin falls as {list}")
+        print(f"oops you lost the toss , the coin falls as {list}")
 
 
 def guess_the_cup():
