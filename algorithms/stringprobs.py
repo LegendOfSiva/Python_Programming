@@ -95,24 +95,23 @@ def ispangram(alphabet=string.ascii_lowercase):
 
 def longestSubString():
     giveninput = input(
-        "Enter the string to find longest substring in it without repeated characters"
+        "Enter the string to find longest substring in it without repeated characters: "
     )
-    tempinput = giveninput
-    unique_list = []
-    substring = ""
-    for char in giveninput:
-        for char in tempinput:
-            if char not in substring:
-                substring = substring + str(char)
+    subStringsArray=[]
+    mydict={}
+    subString = ''
+    for mychar in giveninput:
+        for item in giveninput:
+            if item not in mydict:
+                subString = subString + item
+                mydict[item] = 1
             else:
-                unique_list.append(substring)
-                substring = ""
-                tempinput = tempinput[1:]
-                break
-    index = 0
-    pos = 0
-    for item in unique_list:
-        if len(item) > index:
-            index = len(item)
-            pos = unique_list.index(item)
-    print(unique_list[pos])
+                subStringsArray.append(subString)
+                subString = ''
+                mydict={}
+                giveninput=giveninput[1:]
+                break;
+    longest_SubString=max(subStringsArray,key=len)
+    print(" \nThe substrings with out repeated chars are : ")
+    print(subStringsArray)
+    print('And the longest substring among them is : '+ longest_SubString)
