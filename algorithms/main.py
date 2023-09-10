@@ -14,6 +14,7 @@ String Problem Region
 # sp.word_pallindrome()
 # sp.ispangram()
 # sp.longestSubString()
+# sp.validParenthesis()
 
 """
 Game Problem Region

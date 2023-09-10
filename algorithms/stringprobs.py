@@ -115,3 +115,26 @@ def longestSubString():
     print(" \nThe substrings with out repeated chars are : ")
     print(subStringsArray)
     print('And the longest substring among them is : '+ longest_SubString)
+
+def validParenthesis():
+    def isValid():
+        s = input("Enter the string which contains only parenthesis: ")
+        mydict = {
+            ")": "(",
+            "}": "{",
+            "]": "["
+        }
+        stack = []
+
+        for char in s:
+            if char in mydict.values():
+                stack.append(char)
+            elif char in mydict.keys():
+                if not stack or stack.pop() != mydict[char]:
+                    return False
+
+        return not stack
+    if isValid():
+        print("Yay ! Input string contains balanced parenthesis")
+    else :
+        print("Nope ! Input string doesn't contains balanced parenthesis")
