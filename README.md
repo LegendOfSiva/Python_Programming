@@ -1,4 +1,4 @@
-# PyPract
+# Python_Programming
 My Personal Python Repo
 
 Clone the repo to your local
