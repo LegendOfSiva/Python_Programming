@@ -34,8 +34,35 @@ class binary_search_tree:
         if root is None:
             return
         self.inorder_traversal(root.left)
-        print(root.value, end=" ")
+        print(root.value, end=" \n")
         self.inorder_traversal(root.right)
+
+    def contains_node(self, value):
+        if not self.root:
+            return
+        current = self.root
+        while current:
+            if value == current.value:
+                return f"\nNode {value} is found !!"
+            elif value < current.value:
+                current = current.left
+            else:
+                current = current.right
+        return f"\nNode {value} is not found "
+
+    def BFS(self, root):
+        if not root:
+            return "\nTree is empty "
+        queue = [root]
+        result = []
+        while queue:
+            current = queue.pop(0)
+            result.append(current.value)
+            if current.left:
+                queue.append(current.left)
+            if current.right:
+                queue.append(current.right)
+        print(result)
 
 
 BST = binary_search_tree()
@@ -46,3 +73,5 @@ BST.insert_node(8)
 
 print("Inorder Traversal:")
 BST.inorder_traversal(root)
+BST.BFS(root)
+print(BST.contains_node(8))
