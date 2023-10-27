@@ -63,7 +63,7 @@ class WeightedGraph:
     beginning like current_node=queue.pop(0)"""
 
     def dijkstra(self, start_vertex):
-        distances = {vertex: float('inf') for vertex in self.Glist}
+        distances = {vertex: float("inf") for vertex in self.Glist}
         distances[start_vertex] = 0
         priority_queue = [(0, start_vertex)]
 
